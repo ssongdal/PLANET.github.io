@@ -1,0 +1,301 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>나의 능력치 테스트</title>
+    <meta name="description" content="게임 캐릭터처럼 나의 능력치를 알아보는 mbti 테스트입니다.">
+<meta name="keywords" content="능력치테스트, 나의능력치, 능력치mbti, 능력치테스트,mbti, 테스트잇, 성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="나의 능력치 테스트">
+    <meta property="og:description" content="게임 캐릭터처럼 나의 능력치를 알아보는 mbti 테스트입니다.">
+    <meta property="og:image" content="img_main40.png">
+    <meta property="og:url" content="https://testplanet.co.kr/test40">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #b64eeb;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+        
+        
+ 
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+   <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo2.png" alt="test planet"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="test.html">성격</a></li>
+            <li> <a href="face.html">얼굴</a></li>
+            <li> <a href="etc.html">퀴즈</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+
+
+
+     <!--시작화면-->
+    <article class="start">
+        <img id="img_main" class="mt-5" src="img_main40.png">
+        <button type="button" class="btn btn-info mt-5" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(201, 201, 201); border-color: rgb(201, 201, 201);">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h6 style="font-weight: bold; color: black;" class="text-center mt-5" id="title">문제</h6>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(202, 174, 216); border-color: rgb(202, 174, 216);">Primary</button>
+        <button id="B" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(202, 174, 216); border-color: rgb(202, 174, 216);">Primary</button>
+
+        </article>
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <!-- share 클래스는 내가 위치 조정을 위해서 준 클래스-->
+        <div class="share addthis_inline_share_toolbox"></div>
+            
+    </article>
+
+
+    <article class="coupang_ad mt-3">
+<a href="https://link.coupang.com/a/MKYFo" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+        var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+        var q = {
+              1: {"title": "일어나지 않는 일을 상상하는 것은", "type": "SN", "A": "쓸데없다", "B": "재미있다"},
+             2: {"title": "완벽한 휴일이란", "type": "EI", "A": "햇살 좋은 날 완벽하게 꾸미고 나가기", "B": "햇살 좋은 날 완벽하게 집안일 끝내고 눕기"},
+             3: {"title": "내가 사장이라면 어떤 직원을 뽑을 것인가?", "type": "TF", "A": "일 못하는데 정말 착한 직원", "B": "일 잘하는데 대답 안 하는 직원"},
+
+             4: {"title": "나는 되도록이면 방을", "type": "JP", "A": "있는 그대로 두는 편이다", "B": "깨끗하게 정리해둔다"},
+             5: {"title": "과거의 선택 때문에 후회한 적이 있다면", "type": "SN", "A": "그것 또한 경험이라고 생각한다", "B": "과거로 돌아가서 선택을 바꾸고 싶다"},
+            6: {"title": "나는 나간 김에 모든 스케줄을", "type": "EI", "A": "해결하지 않는다 또 나가면 된다", "B": "해결한다 또 나가기 귀찮다"},
+
+                7: {"title": "아무거나 좋다는 뜻은", "type": "TF", "A": "선택하기 어려워서 하는 말", "B": "진짜 아무거나 괜찮아서 하는 말"},
+             8: {"title": "계획이 틀어졌을 때 나는", "type": "JP", "A": "다른 계획을 세운다", "B": "틀어진 거에 대해 스트레스를 받는다"},
+            9: {"title": "터무니없는 상상은 나를", "type": "SN", "A": "귀찮게 한다", "B": "즐겁게 한다"},
+
+         10: {"title": "친구들이 나 빼고 놀아도", "type": "EI", "A": "안 괜찮다", "B": "괜찮다"},
+            11: {"title": "아프다고 했을 때 병원 가라는 답장이 오면", "type": "TF", "A": "기분이 좋지 않다", "B": "아무렇지 않다"},
+              12: {"title": "어디 가기 전에 그 장소에 대해", "type": "JP", "A": "대충 훑어본다", "B": "자세히 찾아본다"}
+        }
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "ISTJ": {"img":"img_istj40.png"},
+            "ISFJ": {"img":"img_isfj40.png"},
+            "INFJ": {"img":"img_infj40.png"},
+            "INTJ": {"img":"img_intj40.png"},
+
+            "ISTP": {"img":"img_istp40.png"},
+            "ISFP": {"img":"img_isfp40.png"},
+            "INFP": {"img":"img_infp40.png"},
+            "INTP": {"img":"img_intp40.png"},
+
+            "ESTP": {"img":"img_estp40.png"},
+            "ESFP": {"img":"img_esfp40.png"},
+            "ENFP": {"img":"img_enfp40.png"},
+            "ENTP": {"img":"img_entp40.png"},
+
+            "ESTJ": {"img":"img_estj40.png"},
+            "ESFJ": {"img":"img_esfj40.png"},
+            "ENFJ": {"img":"img_enfj40.png"},
+            "ENTJ": {"img":"img_entj40.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            // 마지막 문제인 경우
+            if(num==13){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+                var mbti = "";
+                
+                // 삼항 연산자를 사용해서 MBTI 계산
+                ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
+                ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+
+        }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60358a0895fc8bb9"></script>
+
+</body>
+</html>

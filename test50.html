@@ -1,0 +1,308 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>말풍선 성격 테스트</title>
+    <meta name="description" content="남이 보는 내 성격은 어떤지 MBTI 기반으로 알려주는 테스트입니다.">
+<meta name="keywords" content="테스트플래닛,남이보는내성격,말풍선성격테스트,말풍선 테스트, 말풍선 mbti, 말풍선 성격, 남이보는 mbti, 연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="말풍선 성격 테스트">
+    <meta property="og:description" content="남이 보는 내 성격은 어떤지 MBTI 기반으로 알려주는 테스트입니다.">
+    <meta property="og:image" content="img_main50.png">
+    <meta property="og:url" content="https://testplanet.co.kr/test50.html">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #bce6f0;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+        
+        
+    .at-share-btn-elements{
+        text-align: center;
+    }
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo2.png" alt="test planet"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="test.html">성격</a></li>
+            <li> <a href="face.html">얼굴</a></li>
+            <li> <a href="etc.html">퀴즈</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+
+  
+
+     <!--시작화면-->
+    <article class="start">
+        <img id="img_main" class="mt-5" src="img_main50.png">
+        <button type="button" class="btn btn-info mt-5" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(188, 230, 240); border-color: rgb(188, 230, 240);">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h6 style="font-weight: bold; color: black;" class="text-center mt-5" id="title">문제</h6>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 231, 241); border-color: rgb(255, 231, 241);">Primary</button>
+        <button id="B" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(211, 255, 196); border-color: rgb(211, 255, 196);">Primary</button>
+
+        </article>
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_ougq"></div>
+            
+            
+    </article>
+
+
+    <article class="coupang_ad mt-3">
+<a href="https://link.coupang.com/a/NSggU" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+        
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+          var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+             var q = {
+              1: {"title": "나는 친구들과 먼저 약속을 잡는 편이다", "type": "EI", "A": "그렇다", "B": "아니다"},
+             2: {"title": "친구들과 나는 주로 이런 얘기를 한다", "type": "SN", "A": "현실적인 얘기와 고민", "B": "헛소리가 대부분인 대화"},
+             3: {"title": "나는 친구에게 쉽게 감동받는 편이다", "type": "TF", "A": "그렇다", "B": "아니다"},
+
+             4: {"title": "친구들과 여행을 가면 나의 포지션은", "type": "JP", "A": "군말 없이 따라다니는 것", "B": "여행 계획을 짜는 편"},
+             5: {"title": "나는 웃긴 상상을 자주 하는 편이다", "type": "SN", "A": "아니다", "B": "그렇다"},
+            6: {"title": "나는 친구들과 놀고 헤어졌을 때<br><br>친구와 가는 방향이 같으면", "type": "EI", "A": "더 떠들 수 있어서 좋다", "B": "집에 가는 길은 혼자 가고 싶다"},
+
+                7: {"title":"나는 친구에게 섭섭한 것이 있으면", "type": "TF", "A": "속으로 쌓아두는 편이다", "B": "바로바로 말하는 편이다"},
+             8: {"title": "갑자기 휴일이 생기면 나는", "type": "JP", "A": "너무 좋다! 할 게 많다", "B": "좋긴 한데 뭘 해야 할지 모르겠다"},
+            9: {"title": "친구들과 예상보다 일찍 헤어지게 되면", "type": "EI", "A": "더 놀고 싶었는데.. 서운하다", "B": "피곤했는데 잘 됐다"},
+
+         10: {"title": "나는 친구와 우리의 미래에 대해", "type": "SN", "A": "잘 얘기하지 않는다", "B": "미래에 우린 뭐 하고 있을지 얘기한다"},
+            11: {"title": "나는 친구와의 끊임없는 연락이", "type": "TF", "A": "재밌다", "B": "힘들다"},
+              12: {"title": "친구가 갑자기 약속 장소를 바꾸면", "type": "JP", "A": "대수롭지 않게 생각한다", "B": "스트레스를 받는다"}
+        }
+
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "ISTJ": {"img":"img_istj50.png"},
+            "ISFJ": {"img":"img_isfj50.png"},
+            "INFJ": {"img":"img_infj50.png"},
+            "INTJ": {"img":"img_intj50.png"},
+
+            "ISTP": {"img":"img_istp50.png"},
+            "ISFP": {"img":"img_isfp50.png"},
+            "INFP": {"img":"img_infp50.png"},
+            "INTP": {"img":"img_intp50.png"},
+
+            "ESTP": {"img":"img_estp50.png"},
+            "ESFP": {"img":"img_esfp50.png"},
+            "ENFP": {"img":"img_enfp50.png"},
+            "ENTP": {"img":"img_entp50.png"},
+
+            "ESTJ": {"img":"img_estj50.png"},
+            "ESFJ": {"img":"img_esfj50.png"},
+            "ENFJ": {"img":"img_enfj50.png"},
+            "ENTJ": {"img":"img_entj50.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            // 마지막 문제인 경우
+            if(num==13){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+                var mbti = "";
+                
+                // 삼항 연산자를 사용해서 MBTI 계산
+                ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
+                ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+
+</body>
+</html>

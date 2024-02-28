@@ -1,0 +1,1544 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="naver-site-verification" content="8195b63bd93767dc28e114d4bcd2834593f0ee37" />
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>강아지상 테스트</title>
+    <meta name="description" content="얼굴로 보는 인공지능 강아지상 테스트, 내 얼굴은 어떤 강아지상일까?">
+    <meta name="title" content="나는 어떤 강아지의 얼굴과 닮았을까?">
+    <meta name="subject" content="얼굴로 보는 인공지능 강아지상 테스트, 나와 닮은 강아지를 찾아보세요!">
+    <meta name="keywords" content="강아지상, 강아지상테스트, 개상, 개상테스트, 강아지얼굴">
+
+    <meta name="author" content="test planet">
+ 
+   <style>
+
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+}
+
+.main-nav a{
+    color: #432;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+       
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #735932;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #F9ECD9;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #F9ECD9;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #F9ECD9;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #E1D0B6;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #F9ECD9;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #998465;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #735932;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #A5A297;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.gd-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 102, 102, 0.2);
+}
+.gd-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 102, 102, 1);
+}
+.gr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.gr-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.ds-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.ds-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+.db-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 102, 153, 0.2);
+}
+.db-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 102, 153, 1);
+}
+.mt-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(102, 204, 153, 0.2);
+}
+.mt-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(102, 204, 153, 1);
+}
+.bdc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(49, 132, 155, 0.2);
+}
+.bdc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(49, 132, 155, 1);
+}
+.bd-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(235, 166, 190, 0.2);
+}
+.bd-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(235, 166, 190, 1);
+}
+.bg-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(105, 140, 102, 0.2);
+}
+.bg-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(105, 140, 102, 1);
+}
+.bs-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.bs-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.sm-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 153, 255, 0.2);
+}
+.sm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 153, 255, 1);
+}
+.sn-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 205, 0, 0.2);
+}
+.sn-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 205, 0, 1);
+}
+.sb-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 102, 0, 0.2);
+}
+.sb-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 102, 0, 1);
+}
+
+.hs-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 102, 102, 0.2);
+}
+.hs-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 102, 102, 1);
+}
+.sc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.sc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.yc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.yc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+.ws-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 102, 153, 0.2);
+}
+.ws-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 102, 153, 1);
+}
+.jd-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(102, 204, 153, 0.2);
+}
+.jd-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(102, 204, 153, 1);
+}
+.cw-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(49, 132, 155, 0.2);
+}
+.cw-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(49, 132, 155, 1);
+}
+.cww-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(235, 166, 190, 0.2);
+}
+.cww-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(235, 166, 190, 1);
+}
+.cc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(105, 140, 102, 0.2);
+}
+.cc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(105, 140, 102, 1);
+}
+.pg-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.pg-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.pm-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 153, 255, 0.2);
+}
+.pm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 153, 255, 1);
+}
+.pd-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 102, 0, 0.2);
+}
+.pd-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 102, 0, 1);
+}
+.pb-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 204, 0, 0.2);
+}
+.pb-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 204, 0, 1);
+}
+
+
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.et-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.dog-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.gd-dog-title {
+    color: #676a6e;
+}
+.gd-dog-celeb {
+    color: #3e99e9;
+    font-size: 1.2rem;
+}
+.gr-dog-title {
+    color: #3ba363;
+}
+.gr-dog-celeb {
+    color: #3ba363;
+    font-size: 1.2rem;
+}
+.ds-dog-title {
+    color: #ff6c0a;
+}
+.ds-dog-celeb {
+    color: #ff6c0a;
+    font-size: 1.2rem;
+}
+.db-dog-title {
+    color: #548dd4;
+}
+.db-dog-celeb {
+    color: #548dd4;
+    font-size: 1.2rem;
+}
+.mt-dog-title {
+    color: #e56995;
+}
+.mt-dog-celeb {
+    color: #e56995;
+    font-size: 1.2rem;
+}
+.bdc-dog-title {
+    color: #9b6b43;
+}
+.bdc-dog-celeb {
+    color: #9b6b43;
+    font-size: 1.2rem;
+}
+.bd-dog-title {
+    color: #31849b;
+}
+.bd-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.bg-dog-title {
+    color: #31849b;
+}
+.bg-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.bs-dog-title {
+    color: #31849b;
+}
+.bs-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.sm-dog-title {
+    color: #31849b;
+}
+.sm-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.sn-dog-title {
+    color: #31849b;
+}
+.sn-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.sb-dog-title {
+    color: #31849b;
+}
+.sb-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.hs-dog-title {
+    color: #31849b;
+}
+.hs-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.sc-dog-title {
+    color: #31849b;
+}
+.sc-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.yc-dog-title {
+    color: #31849b;
+}
+.yc-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.ws-dog-title {
+    color: #31849b;
+}
+.ws-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.jd-dog-title {
+    color: #31849b;
+}
+.jd-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+.cw-dog-title {
+    color: #31849b;
+}
+.cw-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+.cww-dog-title {
+    color: #31849b;
+}
+.cww-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+.cc-dog-title {
+    color: #31849b;
+}
+.cc-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+.pg-dog-title {
+    color: #31849b;
+}
+.pg-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+.pm-dog-title {
+    color: #31849b;
+}
+.pm-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.pd-dog-title {
+    color: #31849b;
+}
+.pd-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}.pb-dog-title {
+    color: #31849b;
+}
+.pb-dog-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+</style>
+
+
+    <link rel="canonical" href="https://testplanet.co.kr/test22.html" />
+    <meta property="og:url" content="https://testplanet.co.kr/test22.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="강아지상 테스트" />
+    <meta property="og:description" content="얼굴로 보는 인공지능 강아지상 테스트, 나는 어느 강아지와 닮았을까? 강아지 사진 데이터로 학습한 인공지능이 나의 얼굴로 닮은 강아지를 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 강아지상 테스트 한번 해보세요!"
+    />
+ 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="test23.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+<body>
+          
+     <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo2.png" alt="test planet"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="test.html">성격</a></li>
+            <li> <a href="face.html">얼굴</a></li>
+            <li> <a href="etc.html">퀴즈</a></li>
+        </u1>
+    </nav>
+        
+        
+        
+    </header>
+
+
+
+    <section class="section">
+        <h1 class="title">강아지상 테스트</h1>
+        <h2 class="subtitle">나는 어떤 강아지 상일까?</h2>
+        <h2 class="sr-only">나는 어떤 강아지와 닮았을까? 나의 강아지 찾기를 해보세요!</h2>
+        <h3 class="sr-only">강아지 사진 데이터로 학습한 인공지능이 나의 얼굴로 강아지를 찾아드립니다.</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">얼굴로 보는 인공지능 강아지상 테스트, 나와 닮은 강아지 종류를 찾아보세요! 강아지 사진 데이터로 학습한 인공지능이 나의 얼굴로 닮은 강아지를 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 강아지상 테스트 한번 해보세요!</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face22.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">성별을 선택하세요</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">닮은 강아지를 찾는중입니다.</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 재시도</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <div class="coupang-banner">
+        <a href="https://coupa.ng/bXLy4J" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+    </div>
+
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; test planet 2024. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/b5KR3hnpA/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/b5KR3hnpA/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                    case "gd":
+                        resultTitle = "골든리트리버"
+                        resultExplain = "건실하고 기민하고 자신감이 있어 보이며 황금색털이 매력적인 골든리트리버"
+                        resultCeleb = "성격 : 친밀하며 믿음 있고 애정이 깊으며 확실한 성품"
+                        break;
+                    case "gr":
+                        resultTitle = "그레이하운드"
+                        resultExplain = "길고 얇은 꼬리, 뒤로 붙은 귀와 근육질의 체형을 가진 그레이하운드"
+                        resultCeleb = "성격 : 관찰력과 민첩성이 뛰어나고 끈기, 강인함이 있고 정이 많음"
+                        break;
+                    case "ds":
+                        resultTitle = "닥스훈트"
+                        resultExplain = "몸은 길고 다리는 짧으며 근육이 있고 가죽은 탄력이 있고 나긋한 닥스훈트"
+                        resultCeleb = "성격 : 명랑하고 장난스럽고 헛짖음과 무는 성질이 강함"
+                        break;
+                    case "db":
+                        resultTitle = "도베르만"
+                        resultExplain = "사각형 모양과 근육질의 몸체와 우아하고 귀족적인 외모를 지닌 도베르만"
+                        resultCeleb = "성격 : 원기왕성하고 주의 깊으며 단호하고 충직하면서 순종적임"
+                        break;
+                    case "mt":
+                        resultTitle = "말티즈"
+                        resultExplain = "코는 점점 까매지고 순백의 비단같은 털이 온몸에 덮여 있는 말티즈"
+                        resultCeleb = "성격 : 몹시 까다롭고 활달하며 질투와 응석이 있고 사람들과 친밀하게 지냄"
+                        
+                            break;
+                    case "bdc":
+                        resultTitle = "보더콜리"
+                        resultExplain = "좋은 균형의 강건한 외형을 가진 보더콜리"
+                        resultCeleb = "성격 : 활력적이고 민첩하며 의욕적이고 친구에게 다정함"
+                        
+                            break;
+                    case "bd":
+                        resultTitle = "불독"
+                        resultExplain = "짧은 다리와 높게 위치한 코, 윗턱보다 아랫턱이 나온 모습을 가진 불독"
+                        resultCeleb = "성격 : 부드럽고 온순하고 침착하나 화가 나면 만만치 않음"
+                        
+                            break;
+                    case "bg":
+                        resultTitle = "비글"
+                        resultExplain = "늘어진 귀와 눈을 치켜뜨고 쳐다보는 모습이 인상적인 비글"
+                        resultCeleb = "성격 : 느긋한 성질을 가지고 있으며 쾌활하고 명랑한 응석꾸러기같은 성품"
+                        
+                            break;
+                    case "bs":
+                        resultTitle = "비숑프리제"
+                        resultExplain = "흰 솜사탕 같은 외모와 작고 단단한 외관을 가진 비숑프리제"
+                        resultCeleb = "성격 : 독립심이 강하며 세심하고 친밀하며 명랑함"
+                        
+                            break;
+                    case "sm":
+                        resultTitle = "사모예드"
+                        resultExplain = "근육질에 가슴은 깊고 다리가 적당히 길며 웃는상인 사모예드"
+                        resultCeleb = "성격 : 총명, 충직하고 역동적이며 우호적이며 적응을 잘함"
+                        
+                            break;
+                    case "sn":
+                        resultTitle = "슈나우저"
+                        resultExplain = "털이 곱슬거리며 주둥이에 수염이 많고 다부지며 날씬한 슈나우저"
+                        resultCeleb = "성격 : 늘 바쁘고 부지런히 움직이며 자기주장이 강하고 장난치기를 좋아함"
+                        
+                            break;
+                    case "sb":
+                        resultTitle = "시바견"
+                        resultExplain = "잘 발달한 근육과 일어선 귀, 꼬리가 등에 올라붙은 시바견"
+                        resultCeleb = "성격 : 대담하며 독립성이 있고 활발하고 주인에게 충실함"
+                            break;
+                          case "hs":
+                        resultTitle = "시베리안허스키"
+                        resultExplain = "쫑긋한 귀와 빗자루 같은 꼬리, 적당한 근육을 가진 시베리안허스키"
+                        resultCeleb = "성격 : 쌀쌀맞고 무뚝뚝하나 사람을 좋아하고 주인의 기분을 잘 헤아림"
+                        break;
+                    case "sc":
+                        resultTitle = "시츄"
+                        resultExplain = "동그랗고 큰 눈, 멋지게 늘어진 2중모와 등 위로 곡선을 그리는 꼬리가 특징인 시츄"
+                        resultCeleb = "성격 : 사교적이고 친근하고 영리하며 가끔 고집을 부리기도 함"
+                        break;
+                    case "yc":
+                        resultTitle = "요크셔테리어"
+                        resultExplain = "털이 길고 몸체는 깔끔하고 암팡지며 비례를 이루고 있는 요크셔테리어"
+                        resultCeleb = "성격 : 겁이 없고 활발함과 생기가 넘치며 응석을 잘 부리고 자립심이 강함"
+                        break;
+                    case "ws":
+                        resultTitle = "웰시코기"
+                        resultExplain = "낮게 위치하며 튼튼하고 단단하고 작게 형성된 땅딸만한 소몰이개 웰시코기"
+                        resultCeleb = "성격 : 자신감 있고 친절하며 수줍거나 사납지 않음"
+                        break;
+                    case "jd":
+                        resultTitle = "진돗개"
+                        resultExplain = "역삼각형의 머리와 곧게 선 귀가 특징인 진돗개"
+                        resultCeleb = "성격 : 수렵에 대한 강한 본능과 대담, 용감하며 신중하고 맹렬함"
+                        
+                            break;
+                    case "cw":
+                        resultTitle = "차우차우"
+                        resultExplain = "강한 근육질과 두터운 뼈대, 사자같은 장식털이 돋보이는 차우차우"
+                        resultCeleb = "성격 : 예리한 영민함과 독립성, 낯선 사람에 대한 경계심이 강함"
+                        
+                            break;
+                    case "cww":
+                        resultTitle = "치와와"
+                        resultExplain = "쾌활한 표정에 다부지며 재빠르게 움직이는 치와와"
+                        resultCeleb = "성격 : 기민하고 용감하고 호기심이 강한 테리어 기질이 있음"
+                        
+                            break;
+                    case "cc":
+                        resultTitle = "코커스패니얼"
+                        resultExplain = "아담하며 힘있는 인상, 늘어진 귀에 짧은 꼬리를 가진 코커스패니얼"
+                        resultCeleb = "성격 : 즐겁고 친밀하며 일하고자 하는 믿음을 주는 적극적인 동반자"
+                        
+                            break;
+                    case "pg":
+                        resultTitle = "퍼그"
+                        resultExplain = "눌린 듯한 코와 빛나는 눈, 땅딸막하고 아래턱이 위턱보다 나와있는 퍼그"
+                        resultCeleb = "성격 : 느긋한 성질과 주인에 대한 애정이 깊고 다정하고 인내심이 강함"
+                        
+                            break;
+                    case "pm":
+                        resultTitle = "포메라니안"
+                        resultExplain = "등이 짧고 장식깃털이 많은 꼬리, 조밀한 밑털과 풍성한 겉털을 가진 포메라니안"
+                        resultCeleb = "성격 : 원기왕성하고 대담발랄하며 머리회전이 빠르고 곧잘 흥분함"
+                        
+                            break;
+                    case "pd":
+                        resultTitle = "푸들"
+                        resultExplain = "곱슬곱슬한 털, 우아함과 당당함이 느껴지는 푸들"
+                        resultCeleb = "성격 : 깜찍하고 사교적인 성격을 갖고 있어 애교를 잘부리고 지혜롭고 영리해 사람의 말을 잘 알아들음"
+                        
+                            break;
+                    case "pb":
+                        resultTitle = "핏불테리어"
+                        resultExplain = "중형의 단단하게 짜여진 운동선수같은 근육질의 몸을 가진 핏불테리어"
+                        resultCeleb = "성격 : 느긋하고 조용하지만 아주 강하고 대담하면서도 냉철함"
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                      case "gd":
+                        resultTitle = "골든리트리버"
+                        resultExplain = "건실하고 기민하고 자신감이 있어 보이며 황금색털이 매력적인 골든리트리버"
+                        resultCeleb = "성격 : 친밀하며 믿음 있고 애정이 깊으며 확실한 성품"
+                        break;
+                    case "gr":
+                        resultTitle = "그레이하운드"
+                        resultExplain = "길고 얇은 꼬리, 뒤로 붙은 귀와 근육질의 체형을 가진 그레이하운드"
+                        resultCeleb = "성격 : 관찰력과 민첩성이 뛰어나고 끈기, 강인함이 있고 정이 많음"
+                        break;
+                    case "ds":
+                        resultTitle = "닥스훈트"
+                        resultExplain = "몸은 길고 다리는 짧으며 근육이 있고 가죽은 탄력이 있고 나긋한 닥스훈트"
+                        resultCeleb = "성격 : 명랑하고 장난스럽고 헛짖음과 무는 성질이 강함"
+                        break;
+                    case "db":
+                        resultTitle = "도베르만"
+                        resultExplain = "사각형 모양과 근육질의 몸체와 우아하고 귀족적인 외모를 지닌 도베르만"
+                        resultCeleb = "성격 : 원기왕성하고 주의 깊으며 단호하고 충직하면서 순종적임"
+                        break;
+                    case "mt":
+                        resultTitle = "말티즈"
+                        resultExplain = "코는 점점 까매지고 순백의 비단같은 털이 온몸에 덮여 있는 말티즈"
+                        resultCeleb = "성격 : 몹시 까다롭고 활달하며 질투와 응석이 있고 사람들과 친밀하게 지냄"
+                        
+                            break;
+                    case "bdc":
+                        resultTitle = "보더콜리"
+                        resultExplain = "좋은 균형의 강건한 외형을 가진 보더콜리"
+                        resultCeleb = "성격 : 활력적이고 민첩하며 의욕적이고 친구에게 다정함"
+                        
+                            break;
+                    case "bd":
+                        resultTitle = "불독"
+                        resultExplain = "짧은 다리와 높게 위치한 코, 윗턱보다 아랫턱이 나온 모습을 가진 불독"
+                        resultCeleb = "성격 : 부드럽고 온순하고 침착하나 화가 나면 만만치 않음"
+                        
+                            break;
+                    case "bg":
+                        resultTitle = "비글"
+                        resultExplain = "늘어진 귀와 눈을 치켜뜨고 쳐다보는 모습이 인상적인 비글"
+                        resultCeleb = "성격 : 느긋한 성질을 가지고 있으며 쾌활하고 명랑한 응석꾸러기같은 성품"
+                        
+                            break;
+                    case "bs":
+                        resultTitle = "비숑프리제"
+                        resultExplain = "흰 솜사탕 같은 외모와 작고 단단한 외관을 가진 비숑프리제"
+                        resultCeleb = "성격 : 독립심이 강하며 세심하고 친밀하며 명랑함"
+                        
+                            break;
+                    case "sm":
+                        resultTitle = "사모예드"
+                        resultExplain = "근육질에 가슴은 깊고 다리가 적당히 길며 웃는상인 사모예드"
+                        resultCeleb = "성격 : 총명, 충직하고 역동적이며 우호적이며 적응을 잘함"
+                        
+                            break;
+                    case "sn":
+                        resultTitle = "슈나우저"
+                        resultExplain = "털이 곱슬거리며 주둥이에 수염이 많고 다부지며 날씬한 슈나우저"
+                        resultCeleb = "성격 : 늘 바쁘고 부지런히 움직이며 자기주장이 강하고 장난치기를 좋아함"
+                        
+                            break;
+                    case "sb":
+                        resultTitle = "시바견"
+                        resultExplain = "잘 발달한 근육과 일어선 귀, 꼬리가 등에 올라붙은 시바견"
+                        resultCeleb = "성격 : 대담하며 독립성이 있고 활발하고 주인에게 충실함"
+                            break;
+                          case "hs":
+                        resultTitle = "시베리안허스키"
+                        resultExplain = "쫑긋한 귀와 빗자루 같은 꼬리, 적당한 근육을 가진 시베리안허스키"
+                        resultCeleb = "성격 : 쌀쌀맞고 무뚝뚝하나 사람을 좋아하고 주인의 기분을 잘 헤아림"
+                        break;
+                    case "sc":
+                        resultTitle = "시츄"
+                        resultExplain = "동그랗고 큰 눈, 멋지게 늘어진 2중모와 등 위로 곡선을 그리는 꼬리가 특징인 시츄"
+                        resultCeleb = "성격 : 사교적이고 친근하고 영리하며 가끔 고집을 부리기도 함"
+                        break;
+                    case "yc":
+                        resultTitle = "요크셔테리어"
+                        resultExplain = "털이 길고 몸체는 깔끔하고 암팡지며 비례를 이루고 있는 요크셔테리어"
+                        resultCeleb = "성격 : 겁이 없고 활발함과 생기가 넘치며 응석을 잘 부리고 자립심이 강함"
+                        break;
+                    case "ws":
+                        resultTitle = "웰시코기"
+                        resultExplain = "낮게 위치하며 튼튼하고 단단하고 작게 형성된 땅딸만한 소몰이개 웰시코기"
+                        resultCeleb = "성격 : 자신감 있고 친절하며 수줍거나 사납지 않음"
+                        break;
+                    case "jd":
+                        resultTitle = "진돗개"
+                        resultExplain = "역삼각형의 머리와 곧게 선 귀가 특징인 진돗개"
+                        resultCeleb = "성격 : 수렵에 대한 강한 본능과 대담, 용감하며 신중하고 맹렬함"
+                        
+                            break;
+                    case "cw":
+                        resultTitle = "차우차우"
+                        resultExplain = "강한 근육질과 두터운 뼈대, 사자같은 장식털이 돋보이는 차우차우"
+                        resultCeleb = "성격 : 예리한 영민함과 독립성, 낯선 사람에 대한 경계심이 강함"
+                        
+                            break;
+                    case "cww":
+                        resultTitle = "치와와"
+                        resultExplain = "쾌활한 표정에 다부지며 재빠르게 움직이는 치와와"
+                        resultCeleb = "성격 : 기민하고 용감하고 호기심이 강한 테리어 기질이 있음"
+                        
+                            break;
+                    case "cc":
+                        resultTitle = "코커스패니얼"
+                        resultExplain = "아담하며 힘있는 인상, 늘어진 귀에 짧은 꼬리를 가진 코커스패니얼"
+                        resultCeleb = "성격 : 즐겁고 친밀하며 일하고자 하는 믿음을 주는 적극적인 동반자"
+                        
+                            break;
+                    case "pg":
+                        resultTitle = "퍼그"
+                        resultExplain = "눌린 듯한 코와 빛나는 눈, 땅딸막하고 아래턱이 위턱보다 나와있는 퍼그"
+                        resultCeleb = "성격 : 느긋한 성질과 주인에 대한 애정이 깊고 다정하고 인내심이 강함"
+                        
+                            break;
+                    case "pm":
+                        resultTitle = "포메라니안"
+                        resultExplain = "등이 짧고 장식깃털이 많은 꼬리, 조밀한 밑털과 풍성한 겉털을 가진 포메라니안"
+                        resultCeleb = "성격 : 원기왕성하고 대담발랄하며 머리회전이 빠르고 곧잘 흥분함"
+                        
+                            break;
+                    case "pd":
+                        resultTitle = "푸들"
+                        resultExplain = "곱슬곱슬한 털, 우아함과 당당함이 느껴지는 푸들"
+                        resultCeleb = "성격 : 깜찍하고 사교적인 성격을 갖고 있어 애교를 잘부리고 지혜롭고 영리해 사람의 말을 잘 알아들음"
+                        
+                            break;
+                    case "pb":
+                        resultTitle = "핏불테리어"
+                        resultExplain = "중형의 단단하게 짜여진 운동선수같은 근육질의 몸을 가진 핏불테리어"
+                        resultCeleb = "성격 : 느긋하고 조용하지만 아주 강하고 대담하면서도 냉철함"
+                    
+                        break;
+                  
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-dog-title'>" + resultTitle + "</div>"
+            var explain = "<div class='et-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-dog-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "gd":
+                        labelTitle = "골든리트리버"
+                        break;
+                    case "gr":
+                        labelTitle = "그레이하운드"
+                        break;
+                    case "ds":
+                        labelTitle = "닥스훈트"
+                        break;
+                    case "db":
+                        labelTitle = "도베르만"
+                        break;
+                    case "mt":
+                        labelTitle = "말티즈"
+                        break;
+                    case "bdc":
+                        labelTitle = "보더콜리"
+                        break;
+                    case "bd":
+                        labelTitle = "불독"
+                        break;
+                        case "bg":
+                        labelTitle = "비글"
+                         break;
+                        case "bs":
+                        labelTitle = "비숑프리제"
+                         break;
+                        case "sm":
+                        labelTitle = "사모예드"
+                         break;
+                        case "sn":
+                        labelTitle = "슈나우저"
+                         break;
+                        case "sb":
+                        labelTitle = "시바견"
+                        break;
+                      case "hs":
+                        labelTitle = "허스키"
+                         break;
+                          case "sc":
+                        labelTitle = "시츄"
+                        break;
+                    case "yc":
+                        labelTitle = "요크셔"
+                        break;
+                    case "ws":
+                        labelTitle = "웰시코기"
+                        break;
+                    case "jd":
+                        labelTitle = "진돗개"
+                        break;
+                    case "cw":
+                        labelTitle = "차우차우"
+                        break;
+                    case "cww":
+                        labelTitle = "치와와"
+                        break;
+                    case "cc":
+                        labelTitle = "코커스패니얼"
+                        break;
+                        case "pg":
+                        labelTitle = "퍼그"
+                         break;
+                        case "pm":
+                        labelTitle = "포메라니안"
+                         break;
+                        case "pd":
+                        labelTitle = "푸들"
+                         break;
+                        case "pb":
+                        labelTitle = "핏불테리어"
+                         break;
+                       
+                    default:
+                        labelTitle = "알수없음"
+                }
+                var label = "<div class='et-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
