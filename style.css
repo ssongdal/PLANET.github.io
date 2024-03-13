@@ -35,7 +35,7 @@ body{
 	font-size: 100%;
     line-height: 1.7;
     color: #432;
-    background: #daaaed	;
+    background: #f9effb	;
     
 }
 
@@ -72,7 +72,7 @@ img {
 }
 
 .main-nav a{
-    color: white;
+    color: #939696;
 }
 
 .main-nav a:hover {
